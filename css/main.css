@@ -1,3 +1,8 @@
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
 /*Reset CSS*/
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -51,9 +56,26 @@ table {
 
 /* Base CSS */
 
-body {
+#hero {
     background-image: url('https://siriusscaper.github.io/Portfolio/imgs/MontereyBayAquarium_KelpForest.jpg'), url('/imgs/MontereyBayAquarium_KelpForest.jpg');
     background-size: cover;
+    background-position: center center;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -10;   
+}
+
+#hero-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -5;
 }
 
 *, *::before, *::after {
@@ -62,7 +84,7 @@ body {
 
 /* Typography */
 h1, h3 {
-    font-family: Roboto Condensed, Roboto Slab;
+    font-family: "Raleway", "Oswald";
     color: white;
 }
 
@@ -88,27 +110,30 @@ h3 {
 
 
 /* CSS Grid */
-body {
+
+.container {
     display: grid;
-    grid-gap: 10px;
-    grid-template-areas: 
-    ". . . . ."
-    ". t t t ."
-    ". a a a ."
-    ". a a a ."
-    ". . . . .";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.main {
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
 }
 
 /* Nav */
-
-.itmes {
-    grid-area: a;
-    align-self: center;
-    justify-self: center;
+nav {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: minmax(320px, 640px)
 }
 
-.title {
-    grid-area: t;
+
+
+/* Header */
+header {
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
