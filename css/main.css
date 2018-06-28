@@ -52,7 +52,7 @@ table {
 /* Base CSS */
 
 body {
-    background-image: url(https://siriusscaper.github.io/Portfolio/imgs/MontereyBayAquarium_KelpForest.jpg), url(imgs/MontereyBayAquarium_KelpForest.jpg);
+    background-image: url('https://siriusscaper.github.io/Portfolio/imgs/MontereyBayAquarium_KelpForest.jpg'), url('/imgs/MontereyBayAquarium_KelpForest.jpg');
     background-size: cover;
 }
 
