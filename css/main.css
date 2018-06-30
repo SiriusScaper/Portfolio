@@ -95,7 +95,7 @@ h3 {
 
 .icon {
     opacity: 0.75;                /* Opacity (Transparency) */
-    color: rgba(255, 255, 255, 0.75);   /* RGBA Color (Alternative Transparency) */
+    color: rgba(255, 255, 255, 1);   /* RGBA Color (Alternative Transparency) */
 }
 
 
@@ -188,6 +188,14 @@ header h1 {
     #header nav a span {
         display: none;
     }
+
+.portfolio h3 {
+    /* display: none; */
+    justify-self: center;
+    align-self: center;
+    margin-top: 40px;
+    text-align: center;
+}
 
 .portfolio {
     display: none;
