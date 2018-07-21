@@ -1,0 +1,123 @@
+/* Much of this modal idea is by Mark Holmes https://codepen.io/SMLMRKHLMS/pen/rVYRLQ/ */
+
+.modal {
+  background-color: rgba(0, 150, 136, 0.8);
+  height: 1px;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transition: width 0.5s ease 0.5s, height 0.5s ease;
+  -webkit-transition: width 0.5s ease 0.5s, height 0.5s ease;
+  -moz-transition: width 0.5s ease 0.5s, height 0.5s ease;
+  -ms-transition: width 0.5s ease 0.5s, height 0.5s ease;
+  -o-transition: width 0.5s ease 0.5s, height 0.5s ease;
+  width: 0;
+}
+
+.content {
+  color: transparent;
+  font-family: "Consolas", arial, sans-serif;
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  transform: translate(0, -50%, 0);
+  -webkit-transform: translate(0, -50%, 0);
+  -moz-transform: translate(0, -50%, 0);
+  -ms-transform: translate(0, -50%, 0);
+  -o-transform: translate(0, -50%, 0);
+  transition: color 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -ms-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  width: 100%;
+}
+
+label {
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transition: color 0.5s ease 0.5s;
+  -webkit-transition: color 0.5s ease 0.5s;
+  -moz-transition: color 0.5s ease 0.5s;
+  -ms-transition: color 0.5s ease 0.5s;
+  -o-transition: color 0.5s ease 0.5s;
+}
+
+input {
+  cursor: pointer;
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:checked {
+  height: 40px;
+  opacity: 1;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 1;
+  -webkit-appearance: none;
+  width: 40px;
+}
+
+input:checked::after,
+input:checked:before {
+  border-top: 1px solid #fff;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: rotate(45deg);
+  width: 100%;
+}
+
+input:checked::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
+input:checked + label {
+  color: #ffffff;
+  transition: color 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -ms-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+}
+
+input:checked ~ .modal {
+  height: 100%;
+  width: 100%;
+  transition: width 0.5s ease, height 0.5s ease 0.5s;
+  -webkit-transition: width 0.5s ease, height 0.5s ease 0.5s;
+  -moz-transition: width 0.5s ease, height 0.5s ease 0.5s;
+  -ms-transition: width 0.5s ease, height 0.5s ease 0.5s;
+  -o-transition: width 0.5s ease, height 0.5s ease 0.5s;
+}
+
+input:checked ~ .modal .content {
+  color: #000;
+  transition: color 0.5s ease 0.5s;
+  -webkit-transition: color 0.5s ease 0.5s;
+  -moz-transition: color 0.5s ease 0.5s;
+  -ms-transition: color 0.5s ease 0.5s;
+  -o-transition: color 0.5s ease 0.5s;
+}
