@@ -9,6 +9,7 @@
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Slab" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/modal2.css">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Welcome to my Portfolio</title>
@@ -20,6 +21,7 @@
         <main class="main">
             <header id="header">
                 <h1 class="soft-shadow">Ryan Uselmann</h1>
+                <h3>r.uselmann@gmail.com</h3>
                 <nav class="nav">
                     <ul>
                         <li>
@@ -37,7 +39,9 @@
                             <a title="freeCodeCamp Profile" href="https://www.freecodecamp.org/siriusscaper" target="_blank" class="fab fa-free-code-camp"></a>
                         </li>
                         <li>
-                            <a title="" href="http://" target="_blank" class="fa fa-address-card"></a>
+                            <label for="#button2">
+                                <a href="mailto:r.uselmann@gmail.com" title='Contact Me' class="fa fa-address-card"></a>
+                            </label>
                         </li>
                     </ul>
 
@@ -46,14 +50,59 @@
             </header>
         </main>
 
-
-        <input id="button" type="checkbox">
-        <div class="modal" id="portfolio">
-            <div class="content">
-                <p>Github project</p>
+        <input id="button2" type="checkbox">
+        <div class="modal2" id="contact">
+            <div class="content2">
+                <h3>Contact Me</h3>
+                <form action="">
+                    <label class="name">Name:
+                        <input type="text" id="name">
+                    </label>
+                    <label class="email">Email:
+                        <input type="text" id="email">
+                    </label>
+                    <label message="message">Message:
+                        <textarea name="" id="message" cols="30" rows="10"></textarea>
+                    </label>
+                </form>
             </div>
         </div>
-    </div>
+
+        <input id="button" type="checkbox">
+        <div class="modal">
+            <div class="content" id="portfolio">
+                <div class="projects">
+                    <!-- <h2>Random Quote Generator</h2>
+                    <a target="_blank" href="https://github.com/SiriusScaper/imagine-doodles">
+                        <img src="./imgs/randomquotegen-project2.PNG">
+                    </a>
+                    <br>
+                    <p>This is a project I did for as part of the FreeCodeCamp curriculum. It's a selection of quotes from scientists
+                        that I find particularly inspiring.</p>
+                </div>
+                <div class="projects">
+                    <h2>Random Quote Generator</h2>
+                    <a href="https://github.com/SiriusScaper/imagine-doodles"></a>
+                    <br>
+                    <p>This is a project I did for my bootcamp. The idea is to present googles doodles in a way that connects
+                        people and get users to explore other cultures. I'm specifically planning to make it much more kid
+                        friendly because I would love for my son to want to use it in a few years.</p>
+                </div>
+                <div class="projects">
+                    <h2>Test</h2>
+                    <a href="https://github.com/SiriusScaper/imagine-doodles"></a>
+                    <br>
+                    <p>This is a project I did for my bootcamp. The idea is to present googles doodles in a way that connects
+                        people and get users to explore other cultures. I'm specifically planning to make it much more kid
+                        friendly because I would love for my son to want to use it in a few years.</p>
+                </div> -->
+
+                </div>
+            </div>
+
+
+
+        </div>
 </body>
 
 </html>
