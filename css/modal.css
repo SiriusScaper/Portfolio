@@ -24,9 +24,9 @@
   color: transparent;
   font-family: "Consolas", arial, sans-serif;
   font-size: 1.5em;
-  /* position: absolute;
-  top: 10%; */
-  /* text-align: center; */
+  position: absolute;
+  top: 10%;
+  text-align: center;
   transform: translate(0, -50%, 0);
   -webkit-transform: translate(0, -50%, 0);
   -moz-transform: translate(0, -50%, 0);
@@ -120,7 +120,7 @@ input[type=checkbox]:checked + label {
   -o-transition: color 0.5s ease;
 }
 
-input[type=checkbox]:checked ~ .modal {
+input[type=checkbox]:checked + .modal {
   height: 100%;
   width: 100%;
   transition: width 0.5s ease, height 0.5s ease 0.5s;
@@ -130,7 +130,7 @@ input[type=checkbox]:checked ~ .modal {
   -o-transition: width 0.5s ease, height 0.5s ease 0.5s;
 }
 
-input[type=checkbox]:checked ~ .modal .content {
+input[type=checkbox]:checked + .modal .content {
   color: #000;
   transition: color 0.5s ease 0.5s;
   -webkit-transition: color 0.5s ease 0.5s;
