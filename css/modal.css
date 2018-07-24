@@ -8,10 +8,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
+  -webkit-transform:;
+  -moz-transform:;
+  -ms-transform:;
+  -o-transform:;
   transition: width 0.5s ease 0.5s, height 0.5s ease;
   -webkit-transition: width 0.5s ease 0.5s, height 0.5s ease;
   -moz-transition: width 0.5s ease 0.5s, height 0.5s ease;
@@ -24,9 +24,10 @@
   color: transparent;
   font-family: "Consolas", arial, sans-serif;
   font-size: 1.5em;
-  position: absolute;
+  display: grid;
+  /* position: absolute; */
   top: 10%;
-  text-align: center;
+  /* text-align: center; */
   transform: translate(0, -50%, 0);
   -webkit-transform: translate(0, -50%, 0);
   -moz-transform: translate(0, -50%, 0);
@@ -40,12 +41,12 @@
   width: 50%; 
 }
 
-#portfolio {
+/* #portfolio {
   display: grid;
   grid-template: 5;
   justify-items: center;
   align-items: center;
-}
+} */
 
 .projects img {
   max-width: 450px;
